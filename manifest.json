@@ -1,0 +1,28 @@
+{
+
+  "manifest_version": 2,
+  "name":             "bookmarksync",
+  "version":          "0.1",
+  "description":      "freeidea作品  nosql书签同步 ",
+  "icons": {
+    "128": "images/icloud-icon-128x128.png"
+  },
+
+  "background": { "page": "background.html" },
+
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icloud-icon-19x19.png",
+      "38": "images/icloud-icon-38x38.png"
+    }
+  },
+
+  "permissions": [
+    "bookmarks",
+    "tabs",
+    "nativeMessaging",
+    "storage",
+    "http://127.0.0.1:3000/"
+  ]
+
+ }
