@@ -1,10 +1,14 @@
 .vroot{
   width: 220px;
 }
-.logins a{
-  display: block;
-  width: 80px;
-  float:right;
+.roms{
+text-align: center;
+
+}
+.roms a {
+
+margin: 3px;
+
 }
 .button{
   text-align: center;
@@ -23,4 +27,11 @@
   width: 170px;
   margin: 2px auto;
 
+}
+
+.hisclose{
+  color: #f8f8f8;
+}
+.histviewz{
+  text-align: center;
 }
