@@ -9,7 +9,7 @@
   <body class="loading">
     <div class="vroot">
       <div class="logins">
-        <a v-if='user.status == 1' href="#">退出登录</a>
+        <a v-if='user.status == 1'  v-on:click="logout" href="#">退出登录</a>
         <br>
       </div>
 
@@ -18,7 +18,7 @@
           <input type="password"  name="password" >
         </div>
         <div class="button" v-if='user.status == 0'>
-            <a class="login am-btn am-btn-secondary" href="#">登录</a> <a class="am-btn am-btn-secondary" href="#">注册</a>
+            <a class="login am-btn am-btn-secondary" v-on:click='login' href="#">登录</a> <a class="am-btn am-btn-secondary" href="#">注册</a>
         </div>
         <div  class="actions"  v-if='user.status == 1'>
           <a class="am-btn am-btn-secondary" href="#">下拉</a>

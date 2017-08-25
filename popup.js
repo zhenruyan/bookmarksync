@@ -26,5 +26,14 @@ data: {
     user:{
       status:1
     }
+},
+methods: {
+  logout() {
+    loginstatus.user.status=0;
+  },
+  login(){
+    loginstatus.user.status=1;
+  }
+
 }
 });
