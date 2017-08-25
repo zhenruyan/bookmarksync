@@ -1,4 +1,4 @@
-chrome.bookmarks.getTree(arr=>{console.log(JSON.stringify(arr));localStorage.setItem('a',JSON.stringify(arr))})
+chrome.bookmarks.getTree(arr=>{localStorage.setItem('a',JSON.stringify(arr))})
 
 function tijia() {
   fetch("http://127.0.0.1:3000/",{
@@ -18,3 +18,13 @@ function tijia() {
     }
   );
 }
+
+
+var loginstatus = new Vue({
+  el: '.vroot',
+data: {
+    user:{
+      status:1
+    }
+}
+});

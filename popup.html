@@ -1,25 +1,31 @@
 <!doctype html>
 <html>
   <head>
-    <title>iCloud</title>
-    <meta charset="utf-8">
-       <meta name="renderer" content="webkit|ie-comp|ie-stand">
-       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-       <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-       <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="stylesheet" href="popup.css" type="text/css" media="screen">
-    <script src="popup.js"></script>
+  <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="popup.css" >
+    <script src="/assets/js/vue.js"></script>
   </head>
   <body class="loading">
-    <a href="#">退出登录</a>
-      <div class="login">
-        <input type="text" name="user" value="用户名">
-        <input type="password" name="password" value="密码">
-        <a class="login" href="#">登录</a> <a href="#">注册</a>
+    <div class="vroot">
+      <div class="logins">
+        <a v-if='user.status == 1' href="#">退出登录</a>
+        <br>
       </div>
-      <div class="actions">
-        <a href="#">下拉</a>
-        <a href="#">上推</a>
-      </div>
+
+        <div class="login" v-if='user.status == 0'>
+          <input type="text" name="user" >
+          <input type="password"  name="password" >
+        </div>
+        <div class="button" v-if='user.status == 0'>
+            <a class="login am-btn am-btn-secondary" href="#">登录</a> <a class="am-btn am-btn-secondary" href="#">注册</a>
+        </div>
+        <div  class="actions"  v-if='user.status == 1'>
+          <a class="am-btn am-btn-secondary" href="#">下拉</a>
+          <a class="am-btn am-btn-secondary" href="#">上推</a>
+        </div>
+    </div>
+        <script src="popup.js"></script>
   </body>
+
 </html>
