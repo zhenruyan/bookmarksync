@@ -1,14 +1,16 @@
 // console.log(JSON.stringify(datas));
-datas = data[0].children[0].children
-  /*
-    parentId 父节点id
-    id  id
-    index  排序
-    title  标题
-    children  节点
-    url  链接
-  */
 
+/*
+  parentId 父节点id
+  id  id
+  index  排序
+  title  标题
+  children  节点
+  url  链接
+*/
+data = JSON.parse(localStorage.getItem('a'));
+
+datas = data[0].children[0].children
 
 function addkey(datas, id) {
   for (let ks in datas) {
@@ -28,7 +30,7 @@ function addkey(datas, id) {
         datas[ks].id + '父节点id' +
         id);
       chrome.bookmarks.create({
-        'parentId ': String(id) || "",
+        'parentId': String(id) || "",
         'index': datas[ks].index,
         'title': datas[ks].title,
         'url': datas[ks].url
@@ -37,5 +39,5 @@ function addkey(datas, id) {
   }
 }
 
-addkey(datas);
+// addkey(datas,'1');
 // console.log(datas);
