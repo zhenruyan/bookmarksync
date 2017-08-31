@@ -22,7 +22,9 @@
     "tabs",
     "nativeMessaging",
     "storage",
-    "http://127.0.0.1:3000/"
+    "<all_urls>",
+    "sessions",
+    "cookies"
   ],
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 
