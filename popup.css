@@ -1,37 +1,51 @@
-.vroot{
-  width: 220px;
+html{
+  height: 500px;
 }
+.loading{
+  height: 500px;
+}
+
 .roms{
-text-align: center;
-
+  width: 250px;
+  height: 500px;
 }
-.roms a {
-
-margin: 3px;
-
+.nav{
+  display: flex;
+  justify-content:center;
 }
-.button{
+.nav div{
   text-align: center;
+    width: 60px;
+    height: 60px;
+    margin: 1px;
+    line-height: 60px;
+    background-color: #34cfae;
+    border:3px solid #7fd9cb;
 }
-.button a{
-  margin: 3px;
-}
-.actions{
-  text-align: center;
-}
-.actions  a{
-  margin: 3px;
-}
-.login input {
-  display: block;
-  width: 170px;
-  margin: 2px auto;
-
+.nav div:hover{
+  background-color: #29ac90;
 }
 
-.hisclose{
-  color: #f8f8f8;
-}
-.histviewz{
+.content{
   text-align: center;
+  height: 440px;
+  border: #0e90d2 solid 1px;
+  border-radius: 1px;
+}
+.iconfont{
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
+.content .zi{
+  height: 440px;
+  background-color: #ecf6f2;
+}
+
+.logo{
+  margin: 0 auto ;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: chartreuse;
 }
