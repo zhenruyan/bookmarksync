@@ -17,22 +17,47 @@
       <div class="content">
         <div class="users zi" v-if="page===1" >
           <div class="login" v-if="user.status===0">
-          <input class="am-form-field am-round" type="text">
-          <input class="am-form-field am-round" type="text">
+            <h1>书签同步</h1>
+          <input class="am-form-field am-round" type="text"><br>
+          <input class="am-form-field am-round" type="text"><br>
           <button v-on:click='login' class="am-btn am-btn-primary">登录</button>
           <button class="am-btn am-btn-primary">注册</button>
           </div>
           <div class="status" v-if="user.status===1">
             <div class="logo"><i>头像</i></div>
+            <br>
             <div>
               <button class="am-btn am-btn-primary">修改密码</button>
               <button v-on:click='logout' class="am-btn am-btn-primary">注销用户</button>
             </div>
           </div>
         </div>
-        <div class="syncs zi" v-if="page===2" >2</div>
-        <div class="tools zi"v-if="page===3">3</div>
-        <div class="msgs zi " v-if="page===4">4</div>
+        <div class="syncs zi" v-if="page===2" >
+          <br>
+          <div v-if="user.status===0">未登录</div>
+          <div>
+            <ul v-if="user.status===1">
+              <li v-for="key in list">
+                <i>{{key.id}}</i>-<b>{{ key.dates }}</b>
+                <button>恢复</button><button>删除</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="tools zi"v-if="page===3">
+
+            <div class="toolsnr">
+              <button>本地导入</button>
+              <button>本地导出</button>
+            </div>
+
+        </div>
+        <div class="msgs zi " v-if="page===4">
+          <div> 新闻</div>
+          <ul>
+            <li>更新到了０．１</li>
+          </ul>
+        </div>
       </div>
     </div>
         <script src="delete.js">

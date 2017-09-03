@@ -9,7 +9,31 @@ var root = new Vue({
     page: 1,
     user: {
       status: 0
-    }
+    },
+    list: [{
+        'id': 1,
+        'dates': '20070521',
+        'data': ['temp']
+      }, {
+        'id': 2,
+        'dates': '20070621',
+        'data': ['temp']
+      }, {
+        'id': 3,
+        'dates': '20070721',
+        'data': ['temp']
+      }, {
+        'id': 4,
+        'dates': '20070821',
+        'data': ['temp']
+      }, {
+        'id': 5,
+        'dates': '20070921',
+        'data': ['temp']
+      }
+
+    ]
+
   },
   methods: {
     users() {

@@ -29,7 +29,7 @@ html{
 .content{
   text-align: center;
   height: 440px;
-  border: #0e90d2 solid 1px;
+  /*border: #0e90d2 solid 1px;*/
   border-radius: 1px;
 }
 .iconfont{
@@ -48,4 +48,12 @@ html{
   height: 60px;
   border-radius: 30px;
   background-color: chartreuse;
+}
+.users{
+  padding-top: 40%;
+}
+ul li{
+  list-style: none;
+  margin: 0 0;
+  padding: 0 0 ;
 }
