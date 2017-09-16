@@ -57,6 +57,12 @@ var root = new Vue({
       exportbook(){
         savebookdata();
         exports();
+      },
+      importbook(){
+        console.log('aaa');
+        files = document.querySelector('.importbutton').files[0];
+        console.log(files);
+        alert('aaa');
       }
 
 
@@ -74,7 +80,7 @@ function savebookdata() {
 
 function exports(){
    b=document.querySelector('.exportbutton')
-   b.download='xxx.json'
+   b.download='bookmark'+Date()+'.json'
   data=new Blob([localStorage.getItem('exportdata')])
   b.href=window.URL.createObjectURL(data)
 

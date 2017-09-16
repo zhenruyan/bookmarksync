@@ -50,7 +50,12 @@
 
             <div class="toolsnr">
               <br>
-              <a class="importbutton am-btn am-radius am-btn-success" >本地导入</a>
+
+              <div class="am-form-group am-form-file">
+  <button type="button" class="am-btn am-btn-default am-btn-sm">
+    <i class="am-icon-cloud-upload"></i> 选择要上传的文件</button>
+  <input type="file" class='importbutton' multiple v-on:change="importbook">
+</div>
               <a class="exportbutton am-btn am-radius am-btn-warning" v-on:click="exportbook">本地导出</a>
             </div>
 
