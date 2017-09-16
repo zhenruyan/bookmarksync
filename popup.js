@@ -53,8 +53,29 @@ var root = new Vue({
       },
       logout() {
         root.user.status = 0;
+      },
+      exportbook(){
+        savebookdata();
+        exports();
       }
 
 
   }
 });
+
+/*
+本地导出
+*/
+function savebookdata() {
+  chrome.bookmarks.getTree(arr=>{
+    localStorage.setItem('exportdata',JSON.stringify(arr))
+  })
+}
+
+function exports(){
+   b=document.querySelector('.exportbutton')
+   b.download='xxx.json'
+  data=new Blob([localStorage.getItem('exportdata')])
+  b.href=window.URL.createObjectURL(data)
+
+}

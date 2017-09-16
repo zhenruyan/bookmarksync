@@ -1,14 +1,16 @@
 {
 
   "manifest_version": 2,
-  "name":             "bookmarksync",
-  "version":          "0.1",
-  "description":      "freeidea作品  nosql书签同步 ",
+  "name": "bookmarksync",
+  "version": "0.1",
+  "description": "freeidea作品  nosql书签同步 ",
   "icons": {
     "128": "images/icloud-icon-128x128.png"
   },
 
-  "background": { "page": "background.html" },
+  "background": {
+    "page": "background.html"
+  },
 
   "browser_action": {
     "default_icon": {
@@ -28,4 +30,4 @@
   ],
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 
- }
+}

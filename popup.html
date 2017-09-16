@@ -39,7 +39,9 @@
             <ul v-if="user.status===1">
               <li v-for="key in list">
                 <i>{{key.id}}</i>-<b>{{ key.dates }}</b>
-                <button>恢复</button><button>删除</button>
+                <a class="hfbutton">恢复</a>
+
+                <a class="clearbutton">删除</a>
               </li>
             </ul>
           </div>
@@ -47,8 +49,9 @@
         <div class="tools zi"v-if="page===3">
 
             <div class="toolsnr">
-              <button>本地导入</button>
-              <button>本地导出</button>
+              <br>
+              <a class="importbutton am-btn am-radius am-btn-success" >本地导入</a>
+              <a class="exportbutton am-btn am-radius am-btn-warning" v-on:click="exportbook">本地导出</a>
             </div>
 
         </div>
